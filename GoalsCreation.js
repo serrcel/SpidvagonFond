@@ -31,8 +31,14 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)
 	toPay.innerHTML = "Пожертвовать";
 	toPay.href = "#pay";
 
+	let id = document.createElement('p');
+	id.innerHTML = toGoalId(goalId);
+	id.style.fontsize = "5pt";
+	id.style.color = "#bababa";
+
 	let goal = document.createElement('div');
 	goal.className = "Goal";
+	goal.appendChild(id);
 	goal.appendChild(headBox);
 	goal.appendChild(textBox);
 	goal.appendChild(progressBar);
