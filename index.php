@@ -9,15 +9,18 @@
 <title>Document</title>
 </head>
 <body>
+<!-- Шапка -->
 <div class="Head">
 
 </div>
 
 <div class="MainCase">
+<!-- Блок с целями сбора -->
 <div class="GoalCase" id="GoalsCase">
 <h1>Выберите кому помочь:</h1>
 </div>
 <hr class="Separator" size="1px" noshade>
+<!-- Блок оплаты -->
 <div class="PaymentCase"><a name="pay"></a>
 <h1>Выберите способ оплаты:</h1>
 <div class="PayMethodMenu">
@@ -30,11 +33,13 @@
 </div>
 </div>
 
+<!-- Блок статистики -->
 <div class="StatsCase">
 
 </div>
 </div>
 
+<!-- Подвал сайта -->
 <div class="Footter">
 
 </div>
