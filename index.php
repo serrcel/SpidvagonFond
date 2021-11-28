@@ -18,7 +18,7 @@
 <h1>Выберите кому помочь:</h1>
 </div>
 <hr class="Separator" size="1px" noshade>
-<div class="PaymentFormCase"><a name="pay"></a>
+<div class="PaymentCase"><a name="pay"></a>
 <h1>Выберите способ оплаты:</h1>
 <div class="PayMethodMenu">
 
