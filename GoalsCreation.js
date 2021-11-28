@@ -21,6 +21,8 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)
 	let progress = document.createElement('div');
 	progress.className = "Progress";
 	progress.style.width = (currentSumm/fullSumm)*100+"%";
+	if(progress.style.width>progressBar.style.width)
+		progress.style.width = progressBar.style.width;
 	let progressText = document.createElement('p');
 	progressText.className = "ProgressText";
 	progressText.innerHTML = currentSumm+"/"+fullSumm+" р";
@@ -47,5 +49,13 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)
 }
 function toGoalId(id)
 {
-
+	var variableId = id+"";
+	for(var i=0;i<idFormat;i++)
+	{
+		if(variableId.length<idFormat)
+			variableId="0"+variableId;
+		else
+			break;
+	}
+	return variableId;
 }
