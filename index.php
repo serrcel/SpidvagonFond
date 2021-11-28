@@ -9,6 +9,34 @@
 <title>Document</title>
 </head>
 <body>
+<div class="Head">
 
+</div>
+
+<div class="MainCase">
+<div class="GoalCase" id="GoalsCase">
+<h1>Выберите кому помочь:</h1>
+</div>
+<hr class="Separator" size="1px" noshade>
+<div class="PaymentFormCase"><a name="pay"></a>
+<h1>Выберите способ оплаты:</h1>
+<div class="PayMethodMenu">
+
+</div>
+<div class="PaymentFormCase">
+<form action="">
+
+</form>
+</div>
+</div>
+
+<div class="StatsCase">
+
+</div>
+</div>
+
+<div class="Footter">
+
+</div>
 </body>
 </html>
