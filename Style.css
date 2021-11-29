@@ -1,0 +1,176 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+html
+{
+	height: 100%;
+}
+body
+{
+	height: inherit;
+}
+div
+{
+	box-sizing: border-box;
+}
+.Head
+{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	z-index: 10;
+	background-color: #ababab;
+}
+.MainCase
+{
+	position: relative;
+	top: 100px;
+	left: 10%;
+	width: 80%;
+	background-color: #e0e0e0;
+	float: left;
+}
+.Shadow
+{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+.RegisterMenuBox
+{
+	width: 60%;
+	position: relative;
+	left: 20%;
+	top: 20%;
+	background-color: white;
+	padding: 15px;
+	box-shadow: 0 0 150px rgba(0,0,0,0.5);
+}
+.Separator
+{
+	position: relative;
+	left: 10%;
+	margin: 50px 0;
+	width: 80%;
+	color: #bdbdbd;
+}
+.GoalCase
+{
+	position: relative;
+	width: 100%;
+	float: left;
+}
+.GoalCase>h1
+{
+	margin: 1.5%;
+}
+.Goal
+{
+	background-color: #eaeaea;
+	width: 30%;
+	padding: 10px;
+	margin: 1.5%;
+	float: left;
+}
+.HeadBox
+{
+	width: 100%;
+	float: left;
+	margin: 0 10px 10px 10px;
+}
+.Goal>.HeadBox>h3
+{
+	font-size: 14pt;
+}
+.Goal>a
+{
+	display: block;
+	position: relative;
+	left: 30%;
+	float: left;
+	background-color: #ffb340;
+	width: 40%;
+	font-size: 14pt;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+.Goal>a:hover
+{
+	cursor: pointer;
+	font-weight: bold;
+	background-color: #fe9a00;
+}
+.Goal>a:active
+{
+	font-weight: none;
+	background-color: #ffc773;
+}
+.TextBox
+{
+	width: 100%;
+	float: left;
+	margin: 10px;
+}
+.Goal>.TextBox>p
+{
+	font-size: 12pt;
+}
+.ProgressBar
+{
+	position: relative;
+	margin: 20px 10%;
+	width: 80%;
+	height: 14pt;
+	background-color: white;
+	float: left;
+}
+.Progress
+{
+	height: 100%;
+	width: 0;
+	background-color: #fe9a00;
+	float: left;
+	position: absolute;
+	z-index: 1;
+}
+.ProgressText
+{
+	text-align: center;
+	position: relative;
+	font-size: 12pt;
+	z-index: 100;
+}
+.PaymentCase
+{
+	width: 100%;
+	padding: 0 50px;
+	float: left;
+}
+.PayMethodMenu
+{
+
+}
+.PaymentFormCase
+{
+	
+}
+.StatsCase
+{
+	width: 100%;
+	padding: 50px;
+	float: left;
+}
+.Footter
+{
+	width: 100%;
+	height: 200px;
+	float: left;
+}
