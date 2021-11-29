@@ -177,7 +177,7 @@ div
 	text-align: center;
 	position: relative;
 	font-size: 12pt;
-	z-index: 100;
+	z-index: 2;
 }
 .PaymentCase
 {
