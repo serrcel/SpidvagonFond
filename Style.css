@@ -18,15 +18,46 @@ div
 .Head
 {
 	width: 100%;
-	height: 100px;
+	height: 10%;
 	position: fixed;
 	z-index: 10;
 	background-color: #ababab;
 }
+.Emblem
+{
+	height: 10%;
+	width: 10%;
+	float: left;
+}
+.Navigation
+{
+	width: 80%;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #8c8c8c;
+}
+.AutorisationMenuButtons
+{
+	height: 100%;
+	width: 10%;
+	float:left;
+	border-left: 1px solid #8c8c8c;
+}
+.AutorisationMenuButtons:hover
+{
+	cursor: pointer;
+	background-color: #969696;
+}
+.AutorisationMenuButtons>p
+{
+	padding: 15% 20%;
+	text-align: center;
+	font-size: 14pt;
+}
 .MainCase
 {
 	position: relative;
-	top: 100px;
+	top: 10%;
 	left: 10%;
 	width: 80%;
 	background-color: #e0e0e0;

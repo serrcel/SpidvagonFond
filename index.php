@@ -11,7 +11,25 @@
 <body>
 <!-- Шапка -->
 <div class="Head">
-
+	<div class="Emblem"></div>
+	<div class="Navigation"></div>
+	<?php
+		if(!isset($_SESSION['userName']))		//check autorisation
+		{			//registr/autorisation block
+		?>
+			<div class="AutorisationMenuButtons" onclick="CreateRegisterMenu()">
+			<p>Авторизация/<br>Регистрация</p>
+		<?php
+		}
+		else
+		{
+		?>
+			<div class="AutorisationMenuButtons" onclick="CreaterProfilMenu()">
+			<p><?php echo $_SESSION['userName']; ?></p>
+		<?php
+		}
+		 ?>
+	</div>
 </div>
 
 <div class="MainCase">

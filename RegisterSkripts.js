@@ -18,3 +18,7 @@ function CreateRegisterMenu()
 	shadow.appendChild(registerMenuBox);
 	registerMenuBox.appendChild(form);
 }
+function CreaterProfilMenu()
+{
+
+}
