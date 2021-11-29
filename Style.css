@@ -135,9 +135,7 @@ div
 .Progress
 {
 	height: 100%;
-	width: 0;
 	background-color: #fe9a00;
-	float: left;
 	position: absolute;
 	z-index: 1;
 }
