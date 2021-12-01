@@ -1,3 +1,4 @@
+<?php include 'dataBase.php' ?>
 <html lang="en">
 <head>
 <script src="GoalsCreation.js"></script>
