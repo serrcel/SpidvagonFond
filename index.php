@@ -21,25 +21,18 @@
 		<a class="LowFunctionButton" onclick="CreateMenu()">закрыть</a>
 	</div>
 </div>
+
 <!-- Шапка -->
 <div class="Head">
-	<div class="Emblem"></div>
-	<div class="Navigation"></div>
-	<div class="AutorisationMenuButtons" onclick="CreateMenu()">
-	<?php
-		if(!isset($_SESSION['userName']))
-		{
-		?>
-			<p>Авторизация/<br>Регистрация</p>
-		<?php
-		}
-		else
-		{
-		?>
-			<p><?php echo $_SESSION['userName']; ?></p>
-		<?php
-		}
-		 ?>
+	<img class="Logo">
+	<nav>
+		<ul class = "nav__links">
+			<li><a href="#">Пожертвования</a></li>
+			<li><a href="#">Оплата</a></li>
+			<li><a href="#">Статистика</a></li>
+		</ul>
+	</nav>
+	<a class = "cta" href = "#" onclick="CreateMenu()"><button>Регистрация<button></a>
 	</div>
 </div>
 

@@ -3,9 +3,12 @@
 	margin: 0;
 	padding: 0;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap');
 html
 {
 	height: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
 }
 body
 {
@@ -15,45 +18,46 @@ div
 {
 	box-sizing: border-box;
 }
+li, a, button {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: black;
+	text-decoration: none;
+}
 .Head
 {
-	width: 100%;
-	height: 10%;
-	position: fixed;
-	z-index: 10;
-	background-color: #ffc773;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	background-color: #fe9a00;
 }
-.Emblem
-{
-	height: 10%;
-	width: 10%;
-	float: left;
+
+.nav__links {
+	list-style: none;
 }
-.Navigation
-{
-	width: 80%;
-	height: 100%;
-	float: left;
-	border-left: 1px solid #ffb340;
+.nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
 }
-.AutorisationMenuButtons
-{
-	height: 100%;
-	width: 10%;
-	float:left;
-	border-left: 1px solid #ffb340;
+.nav__links li a{
+	transition: all 0.3s ease 0s;
 }
-.AutorisationMenuButtons:hover
-{
+.nav__links li a:hover{
+	color:#fe9a00;
+}
+button {
+	padding: 9px 25px;
+	border: none;
+	border-radius: 50px;
 	cursor: pointer;
-	background-color: #969696;
+	transition: all 0.3s ease 0s;
 }
-.AutorisationMenuButtons>p
-{
-	padding: 15% 20%;
-	text-align: center;
-	font-size: 14pt;
+button:hover{
+	color:#fe9a00;
 }
+
 .MainCase
 {
 	position: relative;
