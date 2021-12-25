@@ -12,11 +12,11 @@
 			{
 				if($userPassword == $secondPassword)
 				{
-					$sql = "SELECT login, password FROM users WHERE UserName = '" . $userName . "' AND Password = '" . $userPassword . "'";
+					$sql = "SELECT login, password FROM users WHERE login = '" . $userName . "' AND password = '" . $userPassword . "'";
 					$result = $conn->query($sql);
 					if($result->num_rows == 0)
 					{
-						$sql = "INSERT INTO `users` (`id`, `name`, `lastname`, `login`, `password`, `email`, `registerDate`) VALUES (NULL, '". $name ."', '". $lastName ."', '". $userName ."', '". $userPassword ."', '', current_timestamp())";
+						$sql = "INSERT INTO `users` (`id`, `name`, `lastname`, `login`, `password`, `email`, `registerDate`, `lastVisitDate`) VALUES (NULL, '". $name ."', '". $lastName ."', '". $userName ."', '". $userPassword ."', '', current_timestamp(), current_timestamp())";
 						if($conn->query($sql))
 						{
 							$_SESSION['userName']=$userName;
