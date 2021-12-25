@@ -10,6 +10,36 @@
 </head>
 <body>
 <!-- Шапка -->
+<div class="Shadow" id="RegisterMenu" style="display: none">
+	<div class="RegisterMenuBox">
+		<div class="RegisterMenuForms">
+			<form action="" method="post">
+				<h1>Регистрация</h1>
+				<label for="rUName">*Имя:</label>
+				<br><input type="text" id="rName" name="Name" required minlength="2" maxlength="30">
+				<label for="rUName">*Фамилия:</label>
+				<br><input type="text" id="rLName" name="LName" required minlength="2" maxlength="30">
+				<label for="rUName">*Логин:</label>
+				<br><input type="text" id="rUName" name="UName" required minlength="2" maxlength="30">
+				<br><label for="rPass">*Пароль:</label><br>
+				<input type="password" id="rPas" name="Pass" required minlength="5" maxlength="30">
+				<br><label for="rPPass">*Повторите пароль:</label>
+				<br><input type="password" id="rPPas" name="PPass" required>
+				<br><label for="email">*Введите E-Mail:</label>
+				<br><input type="text" id="remail" name="email" required>
+				<br><label>Показать пароль <input type="checkbox" onclick="ShowPass()" id="ShowPassButton"></label>
+				<br><input type="submit" name="" id="reg"></input>
+			</form>
+			<?php include "checkRegisterValid.php" ?>
+		</div>
+
+		<div class="RegisterMenuForms">
+			
+		</div>
+
+		<a class="LowFunctionButton" onclick="CreateRegisterMenu()">закрыть</a>
+	</div>
+</div>
 <div class="Head">
 	<div class="Emblem"></div>
 	<div class="Navigation"></div>

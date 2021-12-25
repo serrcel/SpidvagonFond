@@ -65,6 +65,7 @@ div
 }
 .Shadow
 {
+	display: none;
 	position: absolute;
 	overflow: hidden;
 	top: 0;
@@ -78,11 +79,17 @@ div
 {
 	width: 60%;
 	position: relative;
+	float: left;
 	left: 20%;
 	top: 20%;
 	background-color: white;
-	padding: 15px;
 	box-shadow: 0 0 150px rgba(0,0,0,0.5);
+}
+.RegisterMenuForms
+{
+	width: 50%;
+	float: left;
+	padding: 20px;
 }
 .Separator
 {
@@ -204,4 +211,22 @@ div
 	width: 100%;
 	height: 200px;
 	float: left;
+}
+.LowFunctionButton
+{
+	text-decoration: underline;
+	color: black;
+	width: 100%;
+	text-align: center;
+}
+.LowFunctionButton:hover
+{
+	color: #ffb340;
+	font-weight: bold;
+	cursor: pointer;
+}
+.LowFunctionButton:active
+{
+	color: #fe9a00;
+	font-weight: none;
 }
