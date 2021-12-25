@@ -27,8 +27,8 @@
 	<div class="Navigation"></div>
 	<div class="AutorisationMenuButtons" onclick="CreateMenu()">
 	<?php
-		if(!isset($_SESSION['userName']))		//check autorisation
-		{			//registr/autorisation block
+		if(!isset($_SESSION['userName']))
+		{
 		?>
 			<p>Авторизация/<br>Регистрация</p>
 		<?php
