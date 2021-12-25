@@ -9,7 +9,9 @@ html
 {
 	font-family: "Montserrat", sans-serif;
 }
-
+body {
+	background-color: #f5c0709a;
+}
 li, a, button {
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
@@ -42,7 +44,11 @@ header {
 	transition: all 0.3s ease 0s;
 }
 .navlinks li a:hover{
-	color:#fe9a00;
+	padding: 9px 25px;
+	background-size: contain;
+	background-color:#ff9900;
+	border-radius: 50px;
+	
 }
 button {
 	padding: 9px 25px;
