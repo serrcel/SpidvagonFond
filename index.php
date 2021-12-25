@@ -12,7 +12,12 @@
 <?php $_SESSION['userName']="Jopa";?>
 <div class="Shadow" id="RegisterMenu" style="display: none">
 	<div class="RegisterMenuBox">
-		<?php include "registerMenu.php" ?>
+		<?php
+			if(!isset($_SESSION['userName']))
+				include "registerMenu.php";
+			else
+				include "profilMenu.php";
+		?>
 		<a class="LowFunctionButton" onclick="CreateMenu()">закрыть</a>
 	</div>
 </div>
