@@ -18,15 +18,46 @@ div
 .Head
 {
 	width: 100%;
-	height: 100px;
+	height: 10%;
 	position: fixed;
 	z-index: 10;
-	background-color: #ababab;
+	background-color: #ffc773;
+}
+.Emblem
+{
+	height: 10%;
+	width: 10%;
+	float: left;
+}
+.Navigation
+{
+	width: 80%;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #ffb340;
+}
+.AutorisationMenuButtons
+{
+	height: 100%;
+	width: 10%;
+	float:left;
+	border-left: 1px solid #ffb340;
+}
+.AutorisationMenuButtons:hover
+{
+	cursor: pointer;
+	background-color: #969696;
+}
+.AutorisationMenuButtons>p
+{
+	padding: 15% 20%;
+	text-align: center;
+	font-size: 14pt;
 }
 .MainCase
 {
 	position: relative;
-	top: 100px;
+	top: 10%;
 	left: 10%;
 	width: 80%;
 	background-color: #e0e0e0;
@@ -34,6 +65,7 @@ div
 }
 .Shadow
 {
+	display: none;
 	position: absolute;
 	overflow: hidden;
 	top: 0;
@@ -47,11 +79,17 @@ div
 {
 	width: 60%;
 	position: relative;
+	float: left;
 	left: 20%;
 	top: 20%;
 	background-color: white;
-	padding: 15px;
 	box-shadow: 0 0 150px rgba(0,0,0,0.5);
+}
+.RegisterMenuForms
+{
+	width: 50%;
+	float: left;
+	padding: 20px;
 }
 .Separator
 {
@@ -171,4 +209,44 @@ div
 	width: 100%;
 	height: 200px;
 	float: left;
+}
+.LowFunctionButton
+{
+	text-decoration: underline;
+	color: black;
+	width: 100%;
+	text-align: center;
+}
+.LowFunctionButton:hover
+{
+	color: #ffb340;
+	font-weight: bold;
+	cursor: pointer;
+}
+.LowFunctionButton:active
+{
+	color: #fe9a00;
+	font-weight: none;
+}
+.Profil
+{
+	width: 100%;
+	padding: 25px;
+	float: left;
+}
+.Profil>h1
+{
+	text-align: center;
+}
+.ProfilChapter
+{
+	width: 50%;
+	margin: 10px;
+	border: 3px solid #ffb340;
+	padding: 15px;
+	float: left;
+}
+.ProfilChapter>h3
+{
+	text-align: center;
 }
