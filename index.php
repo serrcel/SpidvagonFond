@@ -9,23 +9,28 @@
 <title>Document</title>
 </head>
 <body>
-<?php include "registerMenu.php" ?>
+<?php $_SESSION['userName']="Jopa";?>
+<div class="Shadow" id="RegisterMenu" style="display: none">
+	<div class="RegisterMenuBox">
+		<?php include "registerMenu.php" ?>
+		<a class="LowFunctionButton" onclick="CreateMenu()">закрыть</a>
+	</div>
+</div>
 <!-- Шапка -->
 <div class="Head">
 	<div class="Emblem"></div>
 	<div class="Navigation"></div>
+	<div class="AutorisationMenuButtons" onclick="CreateMenu()">
 	<?php
 		if(!isset($_SESSION['userName']))		//check autorisation
 		{			//registr/autorisation block
 		?>
-			<div class="AutorisationMenuButtons" onclick="CreateRegisterMenu()">
 			<p>Авторизация/<br>Регистрация</p>
 		<?php
 		}
 		else
 		{
 		?>
-			<div class="AutorisationMenuButtons" onclick="CreaterProfilMenu()">
 			<p><?php echo $_SESSION['userName']; ?></p>
 		<?php
 		}

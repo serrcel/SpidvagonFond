@@ -1,12 +1,7 @@
-function CreateRegisterMenu()
+function CreateMenu()
 {
 	var RegisterMenu = document.getElementById('RegisterMenu');
 	RegisterMenu.style.display = (RegisterMenu.style.display == 'none') ? 'block' : 'none'
-}
-function CreaterProfilMenu()
-{
-	var ProfileMenu = document.getElementById('ProfileMenu');
-	ProfileMenu.style.display = (ProfileMenu.style.display == 'none') ? 'block' : 'none'
 }
 function ShowPass()
 {
