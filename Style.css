@@ -23,8 +23,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 30px 10%;
+	margin-bottom: 0;
 }
+.logo{
+	height: 70px;
 
+}
 .navlinks {
 	list-style: none;
 	display: flex;
@@ -240,4 +244,12 @@ button:hover{
 .ProfilChapter>h3
 {
 	text-align: center;
+}
+
+.RegisterMenuBox{
+	display: flex;
+}
+
+.MainCase{
+	margin-top: 0;
 }

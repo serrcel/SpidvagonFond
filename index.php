@@ -26,6 +26,7 @@
 
 	<!-- Шапка -->	
 	<header>
+		<img class="logo" src="hat.png">
 		<nav>
 			<ul class="navlinks">
 				<li><a href = "#Ggoal">Список сборов</a></li>
@@ -43,8 +44,8 @@
 		
 		</div>
 
-	<hr class="Separator" size="1px" noshade>
-	<!-- Блок оплаты -->
+		<hr class="Separator" size="1px" noshade>
+		<!-- Блок оплаты -->
 		<div class="PaymentCase"><a name="pay"></a>
 		<h1>Выберите способ оплаты:</h1>
 		<div class="PayMethodMenu">
@@ -57,10 +58,10 @@
 		</div>
 		</div>
 
-	<!-- Блок статистики -->
-	<div class="StatsCase">
+		<!-- Блок статистики -->
+		<div class="StatsCase">
 
-	</div>
+		</div>
 	</div>
 
 	<!-- Подвал сайта -->
