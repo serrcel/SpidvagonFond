@@ -1,50 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap');
 *
 {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap');
 html
 {
-	height: 100%;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
 }
-body
-{
-	height: inherit;
-}
-div
-{
-	box-sizing: border-box;
-}
+
 li, a, button {
 	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
+	font-size: 20px;
 	color: black;
 	text-decoration: none;
 }
-.Head
-{
+
+header {
+	background-color: #ffc773;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 30px 10%;
-	background-color: #fe9a00;
 }
 
-.nav__links {
+.navlinks {
 	list-style: none;
+	display: flex;
 }
-.nav__links li {
+
+.navlinks li {
 	display: inline-block;
 	padding: 0px 20px;
 }
-.nav__links li a{
+.navlinks li a{
 	transition: all 0.3s ease 0s;
 }
-.nav__links li a:hover{
+.navlinks li a:hover{
 	color:#fe9a00;
 }
 button {
@@ -55,8 +48,9 @@ button {
 	transition: all 0.3s ease 0s;
 }
 button:hover{
-	color:#fe9a00;
+	background-color:#fe9a00;
 }
+
 
 .MainCase
 {
@@ -194,14 +188,7 @@ button:hover{
 	padding: 0 50px;
 	float: left;
 }
-.PayMethodMenu
-{
 
-}
-.PaymentFormCase
-{
-	
-}
 .StatsCase
 {
 	width: 100%;
