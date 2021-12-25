@@ -10,7 +10,6 @@
 <title>Document</title>
 </head>
 <body>
-<?php $_SESSION['userName']="Jopa";?>
 <div class="Shadow" id="RegisterMenu" style="display: none">
 	<div class="RegisterMenuBox">
 		<?php

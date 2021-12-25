@@ -6,6 +6,7 @@
 		$userName=$_POST['UName'];
 		$userPassword=$_POST['Pass'];
 		$secondPassword=$_POST['PPass'];
+		$userEmail = $_POST['email'];
 		if(strlen($userName)>1 and strlen($userName)<=30)
 		{
 			if(strlen($userPassword)>0 and strlen($userPassword)<=30)
@@ -16,7 +17,7 @@
 					$result = $conn->query($sql);
 					if($result->num_rows == 0)
 					{
-						$sql = "INSERT INTO `users` (`id`, `name`, `lastname`, `login`, `password`, `email`, `registerDate`, `lastVisitDate`) VALUES (NULL, '". $name ."', '". $lastName ."', '". $userName ."', '". $userPassword ."', '', current_timestamp(), current_timestamp())";
+						$sql = "INSERT INTO `users` (`id`, `name`, `lastname`, `login`, `password`, `email`, `registrDate`, `lastVisitDate`) VALUES (NULL, '". $name ."', '". $lastName ."', '". $userName ."', '". $userPassword ."', '". $userEmail ."', current_timestamp(), current_timestamp())";
 						if($conn->query($sql))
 						{
 							$_SESSION['userName']=$userName;
