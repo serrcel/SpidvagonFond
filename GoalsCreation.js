@@ -1,12 +1,13 @@
 idFormat = 16;
 window.onload=function()
 {
+	/*CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
 	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
 	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
 	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
 	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
 	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
+*/
 }
 
 function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal data and create appropriate div on page
@@ -42,6 +43,10 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal 
 																	//create pay button
 	toPay.innerHTML = "Пожертвовать";
 	toPay.href = "#pay";											//create link to pay box
+	toPay.onclick = function()
+	{
+		document.getElementById('PayGoal').value = goalId;
+	}
 
 	let id = document.createElement('p');							//create box to goal id
 	id.innerHTML = toGoalId(goalId);
