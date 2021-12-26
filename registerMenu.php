@@ -14,7 +14,7 @@
 		<br><label for="email">*Введите E-Mail:</label>
 		<br><input type="text" id="remail" name="email" required>
 		<br><label>Показать пароль <input type="checkbox" onclick="ShowPass()" id="ShowPassButton"></label>
-		<br><input class = "regB" type="submit" name="" id="reg"></input>
+		<br><input class = "regB" type="submit" name="Зарегестрироваться" id="reg"></input>
 	</form>
 	<?php include "checkRegisterValid.php" ?>
 </div>

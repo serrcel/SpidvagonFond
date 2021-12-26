@@ -103,6 +103,14 @@ input {
 	border-style: none;
 	background-color: rgb(235, 234, 234);
 }
+.regB{
+	width: 180px;
+}
+.authB{
+	width: 180px;
+}
+
+
 .regB:hover{
 	background-color:#fe9a00;
 }
@@ -131,6 +139,31 @@ input {
 	width: 80%;
 	color: #bdbdbd;
 }
+.close-block {
+	position: absolute;
+	right: 32px;
+	top: 32px;
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
+	}
+	.close-block:hover {
+	opacity: 1;
+	}
+	.close-block:before, .close-block:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 33px;
+	width: 2px;
+	background-color: #333;
+	}
+	.close-block:before {
+	transform: rotate(45deg);
+	}
+	.close-block:after {
+	transform: rotate(-45deg);
+	}
 .GoalCase
 {
 	position: relative;
@@ -143,6 +176,7 @@ input {
 }
 .Goal
 {
+	border-radius: 20px;
 	background-color: #eaeaea;
 	width: 30%;
 	padding: 10px;
@@ -255,26 +289,16 @@ input {
 }
 .Profil
 {
-	width: 100%;
-	padding: 25px;
 	float: left;
+	padding: 60px;
+
 }
 .Profil>h1
 {
-	text-align: center;
+	text-align: left;
 }
-.ProfilChapter
-{
-	width: 50%;
-	margin: 10px;
-	border: 3px solid #ffb340;
-	padding: 15px;
-	float: left;
-}
-.ProfilChapter>h3
-{
-	text-align: center;
-}
+
+
 
 .MainCase{
 	margin-top: 0;

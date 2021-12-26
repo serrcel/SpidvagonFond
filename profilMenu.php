@@ -5,6 +5,7 @@
 ?>
 <div class="Profil">
 	<h1>Профиль пользователя</h1>
+
 	<div class="ProfilChapter">
 		<h3>Общая информация</h3>
 		<?php 
@@ -14,16 +15,18 @@
 			echo "<p><b>Дата регистрации:</b> " . $user['registrDate'] . "</p>";
 		?>
 	</div>
-	<div class="ProfilChapter">
+	<br></br>
+	<div class="ProfilChapter2">
 		<h3>Финансовая информация</h3>
 		<?php 
 			echo "<p><b>Всего средств пожертвованно:</b> " . $user['email'] . "</p>";
 		?>
 	</div>
-	
+	<br><br>
 	<form action="" method="post">
-		<input type="submit" name="drop" value="Выйти">
+		<input class = "authB" type="submit" name="drop" value="Выйти">
 	</form>
+	
 	<?php 
 		if(isset($_POST['drop']))
 		{

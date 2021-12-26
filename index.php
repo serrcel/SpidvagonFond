@@ -13,6 +13,7 @@
 <body>
 	<div class="Shadow" id="RegisterMenu" style="display: none">
 		<div class="RegisterMenuBox">
+			<span onclick = "CreateMenu()" class='close-block'></span>
 			<?php
 				if(!isset($_SESSION['userName']))
 					include "registerMenu.php";
