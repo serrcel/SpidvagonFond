@@ -58,14 +58,22 @@
 		<hr class="Separator" size="1px" noshade>
 		<!-- Блок оплаты -->
 		<div class="PaymentCase"><a name="pay"></a>
-			<h1>Выберите способ оплаты:</h1>
+			<h1>Платите как удобно:</h1>
 			<div class="PayMethodMenu">
-				
+
 			</div>
 			<div class="PaymentFormCase">
-				<form action="">
-
+				<form action="" method="post">
+					<h1>Оплата</h1>
+					<label for="PayGoal">Идентификатор сбора:</label><br>
+					<input type="text" id="PayGoal" name="PayGoal" required><br>
+					<label for="PayCardNumber">Номер карты:</label><br>
+					<input type="text" id="PayCardNumber" name="PayCardNumber" required><br>
+					<label for="PaySum">Размер платежа:</label><br>
+					<input type="text" id="PaySum" name="PaySum" required><br>
+					<input type="submit" name="" id="log"></input>
 				</form>
+				<?php include "checkPayValid.php" ?>
 			</div>
 		</div>
 

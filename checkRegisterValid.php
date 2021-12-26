@@ -7,6 +7,7 @@
 		$userPassword=$_POST['Pass'];
 		$secondPassword=$_POST['PPass'];
 		$userEmail = $_POST['email'];
+		
 		if(strlen($userName)>1 and strlen($userName)<=30)
 		{
 			if(strlen($userPassword)>0 and strlen($userPassword)<=30)
