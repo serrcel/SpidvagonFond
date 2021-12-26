@@ -85,19 +85,43 @@ button:hover{
 }
 .RegisterMenuBox
 {
-	width: 60%;
 	position: relative;
-	float: left;
-	left: 20%;
-	top: 20%;
+  	float: left;
+	left: 25%;
+	top: 10%;
+	width: 50%;
 	background-color: white;
 	box-shadow: 0 0 150px rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+input {
+	border-radius: 10px;
+	padding: 5px;
+	margin-bottom: 10px;
+	font-family: "Montserrat", bold;
+	cursor: pointer;
+	border-style: none;
+	background-color: rgb(235, 234, 234);
+}
+.regB:hover{
+	background-color:#fe9a00;
+}
+.authB:hover{
+	background-color:#fe9a00;
 }
 .RegisterMenuForms
 {
-	width: 50%;
 	float: left;
-	padding: 20px;
+	padding: 60px;
+}
+.vl {
+    border-left: 1px solid rgb(0, 0, 0);
+    height: 1px;
+}
+.RegisterMenuForms2
+{
+	float: right;
+	padding: 60px;
 }
 .Separator
 {

@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 	<div class="Shadow" id="RegisterMenu" style="display: none">
 		<div class="RegisterMenuBox">
 			<?php
@@ -20,7 +19,6 @@
 				else
 					include "profilMenu.php";
 			?>
-			<a class="LowFunctionButton" onclick="CreateMenu()"><button>Закрыть</button></a>
 		</div>
 	</div>
 
