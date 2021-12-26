@@ -34,7 +34,18 @@
 				<li><a>Статистика</a></li>
 			</ul>
 		</nav>
-		<a onclick="CreateMenu()"><button>Регистрация и авторизация</button></a>
+		<a onclick="CreateMenu()">
+			<?php 
+			if(!isset($_SESSION['userName']))
+			{
+				echo "<button>Регистрация и авторизация</button>";
+			}
+			else
+			{
+				echo "<button>". $_SESSION['userName'] ."</button>";
+			}
+			?>
+		</a>
 	</header>
 
 	<div class="MainCase">
@@ -47,15 +58,15 @@
 		<hr class="Separator" size="1px" noshade>
 		<!-- Блок оплаты -->
 		<div class="PaymentCase"><a name="pay"></a>
-		<h1>Выберите способ оплаты:</h1>
-		<div class="PayMethodMenu">
+			<h1>Выберите способ оплаты:</h1>
+			<div class="PayMethodMenu">
+				
+			</div>
+			<div class="PaymentFormCase">
+				<form action="">
 
-		</div>
-		<div class="PaymentFormCase">
-		<form action="">
-
-		</form>
-		</div>
+				</form>
+			</div>
 		</div>
 
 		<!-- Блок статистики -->
