@@ -4,6 +4,31 @@
 	<script src="GoalsCreation.js"></script>
 	<script src="PaymentMenu.js"></script>
 	<script src="RegisterSkripts.js"></script>
+	<script>
+		function CreatePayMethod(emblem, name, bankData)
+		{
+			let MethodBox = document.createElement('div');
+			MethodBox.className = "PayMethodBox";
+			MethodBox.onclick = PeekMethod(bankData);
+
+			let Emblem = document.createElement('img');
+			Emblem.className = "PayMethodEmblem";
+			Emblem.src = emblem;
+
+			let Name = document.createElement('p');
+			Name.className = "PayMethodName";
+			Name.innerHTML = name;
+
+			MethodBox.appendChild(Emblem);
+			MethodBox.appendChild(Name);
+			document.getElementById('PayMethodMenu').appendChild(MethodBox);
+		}
+
+		function PeekMethod(bankData)
+		{
+			document.getElementById('PayMethod').value = bankData;
+		}
+	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="Style.css">
@@ -57,17 +82,26 @@
 		<hr class="Separator" size="1px" noshade>
 		<!-- Блок оплаты -->
 		<div class="PaymentCase"><a name="pay"></a>
-			<h1>Выберите способ оплаты:</h1>
-			<div class="PayMethodMenu">
+			<h1>Платите как удобно:</h1>
+			<div class="PayMethodMenu" id="PayMethodMenu">
 				
 			</div>
 			<div class="PaymentFormCase">
-				<form action="">
-
+				<form action="" method="post">
+					<h1>Оплата</h1>
+					<label for="PayGoal">Идентификатор сбора:</label><br>
+					<input type="text" id="PayGoal" name="PayGoal" required><br>
+					<label for="PayMethod">Целевой счёт:</label><br>
+					<input type="text" id="PayMethod" name="PayMethod" disabled><br>
+					<label for="PayCardNumber">Номер карты:</label><br>
+					<input type="text" id="PayCardNumber" name="PayCardNumber" required><br>
+					<label for="PaySum">Размер платежа:</label><br>
+					<input type="text" id="PaySum" name="PaySum" required><br>
+					<input type="submit" name="" id="log"></input>
 				</form>
+				<?php include "checkPayValid.php" ?>
 			</div>
 		</div>
-
 		<!-- Блок статистики -->
 		<div class="StatsCase">
 
@@ -80,3 +114,18 @@
 	</div>
 </body>
 </html>
+<?php 
+	$sql = "SELECT emblem, name, bankDataLink FROM paymentmethod";
+	$result = $conn->query($sql);
+	while ($row = $result->fetch_assoc())
+	{
+		echo "<script>CreatePayMethod('". $row['emblem'] ."', '". $row['name'] ."', ". $row['bankDataLink'] .");</script>";
+	}
+
+	$sql = "SELECT id, goal, description, currentSum, goalSum FROM goals WHERE isOpen = 1";
+	$result = $conn->query($sql);
+	while ($row = $result->fetch_assoc())
+	{
+		CreateGoal($row['id'], $row['goal'], $row['description'], $row['currentSum'], $row['goalSum'],);
+	}
+?>
