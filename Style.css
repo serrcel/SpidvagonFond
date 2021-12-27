@@ -10,7 +10,7 @@ html
 	font-family: "Montserrat", sans-serif;
 }
 body {
-	background-color: #f5c0709a;
+	background-color: #f0ddc0d3;
 }
 li, a, button {
 	font-family: "Montserrat", sans-serif;
@@ -149,6 +149,7 @@ input {
 	}
 	.close-block:hover {
 	opacity: 1;
+	cursor: pointer;
 	}
 	.close-block:before, .close-block:after {
 	position: absolute;
@@ -169,6 +170,7 @@ input {
 	position: relative;
 	width: 100%;
 	float: left;
+	border-radius: 15px;
 }
 .GoalCase>h1
 {
@@ -302,4 +304,5 @@ input {
 
 .MainCase{
 	margin-top: 0;
+	border-radius: 15px;
 }

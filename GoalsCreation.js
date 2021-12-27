@@ -38,8 +38,9 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal 
 	progressBar.appendChild(progress);								//put scale of progress at the progress bar
 	progressBar.appendChild(progressText);							//put value of progress at the progress bar
 
+
 	let toPay = document.createElement('a');
-																	//create pay button
+	//create pay button
 	toPay.innerHTML = "Пожертвовать";
 	toPay.href = "#pay";											//create link to pay box
 
