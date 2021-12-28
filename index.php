@@ -126,6 +126,6 @@
 	$result = $conn->query($sql);
 	while ($row = $result->fetch_assoc())
 	{
-		CreateGoal($row['id'], $row['goal'], $row['description'], $row['currentSum'], $row['goalSum'],);
+		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].");</script>";
 	}
 ?>
