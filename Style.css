@@ -316,7 +316,6 @@ input {
 	margin: 10px;
 	background-color: #fff;
 	border: 1px solid black;
-	float: left;
 	display: inline-block;
 }
 .PayMethodEmblem
@@ -345,4 +344,20 @@ input {
 	width: 50%;
 	position: relative;
 	left: 25%;
+}
+
+.Goal .HeadBox input{
+	background-color: white;
+}
+.Goal input{
+	background-color: white;
+}
+.Goal input:hover{
+	background-color: #ffb340;
+	cursor: pointer;
+}
+
+.PaymentFormCase{
+	position: relative;
+	margin-top: 20%;
 }
