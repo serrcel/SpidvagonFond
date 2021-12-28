@@ -4,31 +4,6 @@
 	<script src="GoalsCreation.js"></script>
 	<script src="PaymentMenu.js"></script>
 	<script src="RegisterSkripts.js"></script>
-	<script>
-		function CreatePayMethod(emblem, name, bankData)
-		{
-			let MethodBox = document.createElement('div');
-			MethodBox.className = "PayMethodBox";
-			MethodBox.onclick = PeekMethod(bankData);
-
-			let Emblem = document.createElement('img');
-			Emblem.className = "PayMethodEmblem";
-			Emblem.src = emblem;
-
-			let Name = document.createElement('p');
-			Name.className = "PayMethodName";
-			Name.innerHTML = name;
-
-			MethodBox.appendChild(Emblem);
-			MethodBox.appendChild(Name);
-			document.getElementById('PayMethodMenu').appendChild(MethodBox);
-		}
-
-		function PeekMethod(bankData)
-		{
-			document.getElementById('PayMethod').value = bankData;
-		}
-	</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="Style.css">
