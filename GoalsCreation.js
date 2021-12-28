@@ -78,6 +78,7 @@ function toGoalId(id)
 function CreateDesigner()
 {
 	let form = document.createElement('form');
+	form.method = "post";
 
 	let header = document.createElement('input');
 	header.maxLength = "50";
@@ -93,6 +94,8 @@ function CreateDesigner()
 	descript.maxLength = "255";
 	descript.cols = "40";
 	descript.rows = "7";
+	descript.id = "designDescription";
+	descript.name = "designDescription";
 	let textBox = document.createElement('div');					
 	textBox.className = "TextBox";
 	textBox.appendChild(CreateLabel("Опишите вашу ситуацию:"));
@@ -102,6 +105,24 @@ function CreateDesigner()
 	let progress = document.createElement('input');
 	progress.className = "ProgressBar";
 	progress.maxLength = "10";
+	progress.id = "designProgress";
+	progress.name = "designProgress";
+	let progressBox = document.createElement('div');
+	progressBox.className = "TextBox";
+	progressBox.appendChild(CreateLabel("Какая сумма необходима:"));
+	progressBox.appendChild(document.createElement('br'));
+	progressBox.appendChild(progress);
+
+	let requisites = document.createElement('input');
+	requisites.maxLength = "16";
+	requisites.minLength = "16";
+	requisites.id = "designRequisites";
+	requisites.name = "designRequisites";
+	let requisitesBox = document.createElement('div');
+	requisitesBox.className = "TextBox";
+	requisitesBox.appendChild(CreateLabel("Куда переводить деньги:"));
+	requisitesBox.appendChild(document.createElement('br'));
+	requisitesBox.appendChild(requisites);
 
 	let submit = document.createElement('input');
 	submit.type = "submit";
@@ -110,7 +131,8 @@ function CreateDesigner()
 	goal.className = "Goal";
 	form.appendChild(headBox);										//put head at the goal box
 	form.appendChild(textBox);
-	form.appendChild(progress);
+	form.appendChild(progressBox);
+	form.appendChild(requisitesBox);
 	form.appendChild(submit);
 	goal.appendChild(form);
 	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page

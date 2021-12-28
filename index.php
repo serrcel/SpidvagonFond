@@ -51,7 +51,7 @@
 		<!-- Блок с целями сбора -->
 		<div class="GoalCase" id="GoalsCase"><a name="Ggoal"></a>
 		<h1>Выберите кому помочь:</h1>
-		
+		<?php include "checkGoalValid.php" ?>
 		</div>
 
 		<hr class="Separator" size="1px" noshade>
