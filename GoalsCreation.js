@@ -78,13 +78,15 @@ function CreateDesigner()
 {
 	let form = document.createElement('form');
 
-	let headerLabel = document.createElement('label');
-	let headerLabel.innerHTML = "На что вы собираете:";
 	let header = document.createElement('input');
 	header.maxLength = "50";
-	let headBox = document.createElement('div');					
-	headBox.className = "HeadBox";									
-	headBox.appendChild(header);									
+	header.id = "designGoal";
+	header.name = "designGoal";
+	let headBox = document.createElement('div');
+	headBox.className = "HeadBox";
+	headBox.appendChild(CreateLabel("На что вы собираете:"));
+	headBox.appendChild(document.createElement('br'));
+	headBox.appendChild(header);
 
 	let descript = document.createElement('textarea');					
 	descript.maxLength = "255";
@@ -92,6 +94,8 @@ function CreateDesigner()
 	descript.rows = "7";
 	let textBox = document.createElement('div');					
 	textBox.className = "TextBox";
+	textBox.appendChild(CreateLabel("Опишите вашу ситуацию:"));
+	textBox.appendChild(document.createElement('br'));
 	textBox.appendChild(descript);
 
 	let progress = document.createElement('input');
@@ -109,4 +113,10 @@ function CreateDesigner()
 	form.appendChild(submit);
 	goal.appendChild(form);
 	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page
+}
+function CreateLabel(label)
+{
+	let Label = document.createElement('label');
+	Label.innerHTML = label;
+	return Label;
 }
