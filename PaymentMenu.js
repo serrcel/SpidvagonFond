@@ -8,7 +8,6 @@ function CreatePayMethod(emblem, name, bankData)
 	Emblem.className = "PayMethodEmblem";
 	Emblem.onclick = function()
 	{
-		alert("fjisof");
 		document.getElementById('PayMethod').value = bankData;
 	}
 
