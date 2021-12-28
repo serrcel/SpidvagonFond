@@ -90,11 +90,11 @@
 				<form action="" method="post">
 					<h1>Оплата</h1>
 					<label for="PayGoal">Идентификатор сбора:</label><br>
-					<input type="text" id="PayGoal" name="PayGoal" required><br>
+					<input type="text" id="PayGoal" name="PayGoal" minlength="16" maxlength="16" required><br>
 					<label for="PayMethod">Целевой счёт:</label><br>
 					<input type="text" id="PayMethod" name="PayMethod" disabled><br>
 					<label for="PayCardNumber">Номер карты:</label><br>
-					<input type="text" id="PayCardNumber" name="PayCardNumber" required><br>
+					<input type="text" id="PayCardNumber" name="PayCardNumber" minlength="16" maxlength="16" required><br>
 					<label for="PaySum">Размер платежа:</label><br>
 					<input type="text" id="PaySum" name="PaySum" required><br>
 					<input type="submit" name="" id="log"></input>
@@ -122,10 +122,11 @@
 		echo "<script>CreatePayMethod('". $row['emblem'] ."', '". $row['name'] ."', ". $row['bankDataLink'] .");</script>";
 	}
 
-	$sql = "SELECT id, goal, description, currentSum, goalSum FROM goals WHERE isOpen = 1";
+	$sql = "SELECT id, goal, description, currentSum, goalSum FROM goals WHERE isOpen = 1 AND verified != 0";
 	$result = $conn->query($sql);
 	while ($row = $result->fetch_assoc())
 	{
 		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].");</script>";
+		echo "<script>CreateDesigner()</script>";
 	}
 ?>

@@ -75,3 +75,39 @@ function toGoalId(id)
 	}
 	return variableId;
 }
+function CreateDesigner()
+{
+	let form = document.createElement('form');
+
+	let headerLabel = document.createElement('label');
+	let headerLabel.innerHTML = "На что вы собираете:";
+	let header = document.createElement('input');
+	header.maxLength = "50";
+	let headBox = document.createElement('div');					
+	headBox.className = "HeadBox";									
+	headBox.appendChild(header);									
+
+	let descript = document.createElement('textarea');					
+	descript.maxLength = "255";
+	descript.cols = "40";
+	descript.rows = "7";
+	let textBox = document.createElement('div');					
+	textBox.className = "TextBox";
+	textBox.appendChild(descript);
+
+	let progress = document.createElement('input');
+	progress.className = "ProgressBar";
+	progress.maxLength = "10";
+
+	let submit = document.createElement('input');
+	submit.type = "submit";
+
+	let goal = document.createElement('div');						//create goal box
+	goal.className = "Goal";
+	form.appendChild(headBox);										//put head at the goal box
+	form.appendChild(textBox);
+	form.appendChild(progress);
+	form.appendChild(submit);
+	goal.appendChild(form);
+	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page
+}
