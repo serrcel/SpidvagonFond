@@ -363,6 +363,7 @@ input {
 .bankCheckBut{
 	margin-top: 7px;
 	opacity: 0;
+	
 }
 
 .bankCheckBut:checked{
