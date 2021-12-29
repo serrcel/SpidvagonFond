@@ -31,7 +31,7 @@
 			<ul class="navlinks">
 				<li><a href = "#Ggoal">Список сборов</a></li>
 				<li><a href = "#pay">Оплата</a></li>
-				<li><a>Статистика</a></li>
+				<li><a href = "#StatsCase">Статистика</a></li>
 			</ul>
 		</nav>
 		<a onclick="CreateMenu()">
