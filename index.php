@@ -67,7 +67,7 @@
 					<label for="PayGoal">Идентификатор сбора:</label><br>
 					<input type="text" id="PayGoal" name="PayGoal" minlength="16" maxlength="16" required><br>
 					<label for="PayMethod">Целевой счёт:</label><br>
-					<input type="text" id="PayMethod" name="PayMethod" disabled><br>
+					<input type="text" id="PayMethod" name="PayMethod" readonly><br>
 					<label for="PayCardNumber">Номер карты:</label><br>
 					<input type="text" id="PayCardNumber" name="PayCardNumber" minlength="16" maxlength="16" required><br>
 					<label for="PaySum">Размер платежа:</label><br>
