@@ -102,6 +102,6 @@
 	while ($row = $result->fetch_assoc())
 	{
 		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].");</script>";
-		echo "<script>CreateDesigner()</script>";
 	}
+	echo "<script>CreateDesigner()</script>";
 ?>
