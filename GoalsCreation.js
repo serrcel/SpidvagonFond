@@ -28,8 +28,11 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal 
 	progressBar.className = "ProgressBar";						
 	let progress = document.createElement('div');					//create progress scale
 	progress.className = "Progress";
-	progress.style.width = (currentSumm/fullSumm)*100+"%";				//determ scale of progress
-	if(progress.width>progressBar.width)							//check out of range
+	if (currentSumm/fullSumm <= 1)
+		progress.style.width = (currentSumm/fullSumm)*100+"%";
+	else
+		progress.style.width =100+"%";
+	if(progress.width > progressBar.width)							//check out of range
 		progress.style.width = progressBar.style.width;
 
 	let progressText = document.createElement('p');					//create number values of progress
