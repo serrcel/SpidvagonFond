@@ -369,3 +369,21 @@ input {
 	opacity: 1;
 
 }
+.StatBox
+{
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid black;
+	float: left;
+}
+.StatName
+{
+	width: 40%;
+	font-weight: bold;
+	float: left;
+}
+.StatCharacteristic
+{
+	width: 60%;
+	float: left;
+}

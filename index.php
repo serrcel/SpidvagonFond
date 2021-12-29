@@ -4,6 +4,7 @@
 	<script src="GoalsCreation.js"></script>
 	<script src="PaymentMenu.js"></script>
 	<script src="RegisterSkripts.js"></script>
+	<script src="StatsScript.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="Style.css">
@@ -78,8 +79,8 @@
 			</div>
 		</div>
 		<!-- Блок статистики -->
-		<div class="StatsCase">
-
+		<div class="StatsCase" id="StatsCase">
+			<h1>Статистика:</h1>
 		</div>
 	</div>
 
@@ -104,4 +105,12 @@
 		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].");</script>";
 	}
 	echo "<script>CreateDesigner()</script>";
+?>
+<?php
+	$sql = "SELECT SUM(sum) FROM transaction WHERE transaction.date >= CAST(DATE_FORMAT(NOW() ,'%Y-%m-01') as DATE);";
+	$perMonth = $conn->query($sql)->fetch_assoc();
+	$sql = "SELECT SUM(sum) FROM transaction WHERE transaction.date >= CAST(DATE_FORMAT(NOW() ,'%Y-01-01') as DATE);";
+	$perYear = $conn->query($sql)->fetch_assoc();
+	echo "<script>CreateStatsFeeld('Собранно за месяц',". $perMonth['SUM(sum)'] .")</script>";
+	echo "<script>CreateStatsFeeld('Собранно за год',". $perYear['SUM(sum)'] .")</script>";
 ?>
