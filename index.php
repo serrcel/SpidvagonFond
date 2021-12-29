@@ -26,7 +26,7 @@
 
 	<!-- Шапка -->	
 	<header>
-		<img class="logo" src="hat.png">
+		<a href = "/SpidvagonFond" ><img class="logo" src="hat.png"></a>
 		<nav>
 			<ul class="navlinks">
 				<li><a href = "#Ggoal">Список сборов</a></li>
