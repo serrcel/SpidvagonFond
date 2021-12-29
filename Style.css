@@ -313,8 +313,9 @@ input {
 	height: 100%;
 	margin: 10px;
 	background-color: #fff;
-	border: 1px solid black;
+	border: 2px solid black;
 	display: inline-block;
+	cursor: pointer;
 }
 .PayMethodEmblem
 {
@@ -358,4 +359,13 @@ input {
 .PaymentFormCase{
 	position: relative;
 	margin-top: 20%;
+}
+.bankCheckBut{
+	margin-top: 7px;
+	opacity: 0;
+}
+
+.bankCheckBut:checked{
+	opacity: 1;
+
 }
