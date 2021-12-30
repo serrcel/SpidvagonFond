@@ -1,16 +1,10 @@
 idFormat = 16;
 window.onload=function()
 {
-	/*CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-	CreateGoal(14567,"MAtvei","Emblem of Severed Fate (4):  If you already have an invested C6 Xingqiu build with Noblesse Oblige (2) Heart of Depth (2) and Sacrificial Sword, you don't need to farm for this set. Main reason for this is that by exchanging a good NO + HoD set for an EoSF set, you end up losing a good chunk of E damage, which can be detrimental to a highly invested Xingqiu.",228,322);
-*/
+	
 }
 
-function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal data and create appropriate div on page
+function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs)	//accept goal data and create appropriate div on page
 {
 	let header = document.createElement('h3');						//
 	header.innerHTML = head;										//
@@ -42,6 +36,20 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal 
 	progressBar.appendChild(progress);								//put scale of progress at the progress bar
 	progressBar.appendChild(progressText);							//put value of progress at the progress bar
 
+	let docsBox = document.createElement('div');
+	docsBox.className = "DocsBox";
+	let docsLink = document.createElement('a');
+	docsLink.href = vDocs;
+	docsLink.innerHTML = "Подтверждающие документы";
+	docsBox.appendChild(docsLink);
+
+	let verifyingBox = document.createElement('form');
+	verifyingBox.method = "post";
+	let verifyingButton = document.createElement('input');
+	verifyingButton.type = "submit";
+	verifyingButton.name = "verifyide";
+	verifyingButton.value = "Подтвердить";
+	verifyingBox.appendChild(verifyingButton);
 
 	let toPay = document.createElement('a');
 	//create pay button
@@ -63,8 +71,25 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm)	//accept goal 
 	goal.appendChild(headBox);										//put head at the goal box
 	goal.appendChild(textBox);										//put description at the goal box
 	goal.appendChild(progressBar);									//put progress bar at the goal box
+	goal.appendChild(docsBox);
+	goal.appendChild(verifyingBox);
 	goal.appendChild(toPay);										//put pay button at the goal box
 	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page
+}
+function TogleAdminInfo(isAdmin)
+{
+	var Goals = document.getElementsByClassName('Goal');
+	for(var i=0;i<Goals.length-1;i++)
+	{
+		if(isAdmin)
+		{
+			Goals.getElementsByClassName('DocsBox')[0].style.display = "block";
+		}
+		else
+		{
+			Goals.getElementsByClassName('DocsBox')[0].style.display = "none";
+		}
+	}	
 }
 function toGoalId(id)
 {

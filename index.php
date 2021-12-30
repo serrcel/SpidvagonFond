@@ -99,11 +99,11 @@
 		echo "<script>CreatePayMethod('". $row['emblem'] ."', '". $row['name'] ."', ". $row['bankDataLink'] .");</script>";
 	}
 
-	$sql = "SELECT id, goal, description, currentSum, goalSum FROM goals WHERE isOpen = 1 AND verified != 0";
+	$sql = "SELECT id, goal, description, currentSum, goalSum, supportDocs FROM goals WHERE isOpen = 1 AND verified != 0";
 	$result = $conn->query($sql);
 	while ($row = $result->fetch_assoc())
 	{
-		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].");</script>";
+		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].", '". $row['supportDocs'] ."');</script>";
 	}
 	echo "<script>CreateDesigner()</script>";
 ?>
@@ -114,4 +114,7 @@
 	$perYear = $conn->query($sql)->fetch_assoc();
 	echo "<script>CreateStatsFeeld('Собранно за месяц',". $perMonth['SUM(sum)'] .")</script>";
 	echo "<script>CreateStatsFeeld('Собранно за год',". $perYear['SUM(sum)'] .")</script>";
+?>
+<?php 
+	if(isset($_POST['verifyide']))
 ?>

@@ -388,3 +388,9 @@ input {
 	width: 60%;
 	float: left;
 }
+.DocsBox
+{
+	width: 100%;
+	padding: 10px;
+	float: left;
+}
