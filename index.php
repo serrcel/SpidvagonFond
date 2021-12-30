@@ -26,12 +26,13 @@
 
 	<!-- Шапка -->	
 	<header>
-		<img class="logo" src="hat.png">
+		<a href = "/SpidvagonFond" ><img class="logo" src="hat.png"></a>
+		<p>Позаботьтесь о себе сами</p>
 		<nav>
 			<ul class="navlinks">
 				<li><a href = "#Ggoal">Список сборов</a></li>
 				<li><a href = "#pay">Оплата</a></li>
-				<li><a>Статистика</a></li>
+				<li><a href = "#StatsCase">Статистика</a></li>
 			</ul>
 		</nav>
 		<a onclick="CreateMenu()">
