@@ -5,6 +5,7 @@
 		$description = $_POST['designDescription'];
 		$summ = $_POST['designProgress'];
 		$requisites = $_POST['designRequisites'];
+		$docs = $_POST['designDocuments'];
 
 		if($summ > 0)
 		{
@@ -15,7 +16,7 @@
 				$sql = "SELECT id FROM users WHERE login = '". $_SESSION['userName'] ."'";
 				$us = $conn->query($sql);
 				$row = $us->fetch_assoc();
-				$sql = "INSERT INTO `goals`(`id`, `goal`, `description`, `currentSum`, `goalSum`, `isOpen`, `owner`, `cardnumber`) VALUES (NULL, '". $goal ."', '". $description ."', ". 0 .", ". $summ .", ". 0 .", ". $row['id'] .", '". $requisites ."');";
+				$sql = "INSERT INTO `goals`(`id`, `goal`, `description`, `currentSum`, `goalSum`, `isOpen`, `owner`, `cardnumber`, `supportDocs`) VALUES (NULL, '". $goal ."', '". $description ."', ". 0 .", ". $summ .", ". 0 .", ". $row['id'] .", '". $requisites ."','". $docs ."');";
 				$conn->query($sql);
 			}
 			else

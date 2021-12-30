@@ -127,6 +127,15 @@ function CreateDesigner()
 	requisitesBox.appendChild(document.createElement('br'));
 	requisitesBox.appendChild(requisites);
 
+	let docs = document.createElement('input');
+	docs.id = "designDocuments";
+	docs.name = "designDocuments";
+	let documentsBox = document.createElement('div');
+	documentsBox.className = "TextBox";
+	documentsBox.appendChild(CreateLabel("Приложите ссылку на скачивание подтверждающих документов:"));
+	documentsBox.appendChild(document.createElement('br'));
+	documentsBox.appendChild(docs);
+
 	let submit = document.createElement('input');
 	submit.type = "submit";
 
@@ -136,6 +145,7 @@ function CreateDesigner()
 	form.appendChild(textBox);
 	form.appendChild(progressBox);
 	form.appendChild(requisitesBox);
+	form.appendChild(documentsBox);
 	form.appendChild(submit);
 	goal.appendChild(form);
 	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page
