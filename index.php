@@ -116,5 +116,14 @@
 	echo "<script>CreateStatsFeeld('Собранно за год',". $perYear['SUM(sum)'] .")</script>";
 ?>
 <?php 
-	if(isset($_POST['verifyide']))
+	if(isset($veryfide))
+	{
+		$sql = "SELECT verified FROM goals WHERE id = ". $veryfide .";";
+		$result = $conn->query($sql);
+		if($row = $result->fetch_assoc() && $row['verified']==0)
+		{
+			$sql = "UPDATE goals SET verified = 1 WHERE id = ". $veryfide;
+			$conn->query($sql);
+		}
+	}
 ?>

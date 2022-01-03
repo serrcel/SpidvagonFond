@@ -43,12 +43,10 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs)	//accep
 	docsLink.innerHTML = "Подтверждающие документы";
 	docsBox.appendChild(docsLink);
 
-	let verifyingBox = document.createElement('form');
-	verifyingBox.method = "post";
-	let verifyingButton = document.createElement('input');
-	verifyingButton.type = "submit";
-	verifyingButton.name = "verifyide";
-	verifyingButton.value = "Подтвердить";
+	let verifyingBox = document.createElement('div');
+	let verifyingButton = document.createElement('a');
+	verifyingButton.href = "index.php?veryfide="+goalId;
+	verifyingButton.innerHTML = "Подтвердить";
 	verifyingBox.appendChild(verifyingButton);
 
 	let toPay = document.createElement('a');

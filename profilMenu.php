@@ -18,7 +18,7 @@
 	<br></br>
 	<div class="ProfilChapter2">
 		<h3>Финансовая информация</h3>
-		<?php 
+		<?php
 			echo "<p><b>Всего средств пожертвованно:</b> " . $user['email'] . "</p>";
 		?>
 	</div>
