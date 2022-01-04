@@ -32,5 +32,6 @@
 			<p>Ошибка: Сумма сбора должна быть больше нуля.</p>
 			<?php
 		}
+		header("Location: http://localhost/spidvagonfond/");
 	}
 ?>

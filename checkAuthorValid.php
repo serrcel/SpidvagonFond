@@ -31,5 +31,6 @@
 			<p>User name must have length from 2 to 30</p>
 			<?php
 		}
+		header("Location: http://localhost/spidvagonfond/");
 	}
 ?>

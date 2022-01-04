@@ -1,4 +1,4 @@
-<?php 
+<?php
 	if(isset($_POST['PaySum']))
 	{
 		$goal = $_POST['PayGoal'];
@@ -23,7 +23,7 @@
 				}
 				else
 				{
-					$sql = "INSERT INTO transaction(goalId, paymentMethodId, userId, sum, bankData) VALUES(". $goal .", ". $res['id'] .", ". $useId['id'] .", ". $tranzactionSum .", '". $requisites ."');";
+					$sql = "INSERT INTO transaction(goalId, paymentMethodId, userId, sum, bankData) VALUES(". $goal .", ". $res['id'] .", 1, ". $tranzactionSum .", '". $requisites ."');";
 					$conn->query($sql);
 				}
 			}
@@ -40,5 +40,6 @@
 			<p>Сумма перевода должна быть больше нуля</p>
 			<?php
 		}
+		header("Location: http://localhost/spidvagonfond/");
 	}
 ?>
