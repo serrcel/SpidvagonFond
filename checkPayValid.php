@@ -8,18 +8,24 @@
 
 		if($tranzactionSum > 0)
 		{
-			$sql = "SELECT id FROM goals WHERE id = '" . $goal . "' AND isOpen = 1";
+			$sql = "SELECT id FROM goals WHERE id = " . $goal . " AND isOpen = 1";
 			$result = $conn->query($sql);
 			if($result->num_rows != 0)
 			{
-				$sql = "UPDATE goals SET currentSum = currentSum+". $tranzactionSum ." WHERE id = ". $goal .";";
-				$conn->query($sql);
-				$sql = "SELECT id FROM paymentmethod WHERE bankDataLink = ". $payMethod.";";
+				$sql = "SELECT id FROM paymentmethod WHERE bankDataLink = '". $payMethod."';";
 				$res = $conn->query($sql)->fetch_assoc();
-				$sql = "SELECT id FROM users WHERE login = '". $_SESSION['userName'] ."';";
-				$useId = $conn->query($sql)->fetch_assoc();
-				$sql = "INSERT INTO transaction(goalId, paymentMethodId, userId, sum, bankData) VALUES(". $goal .", ". $res['id'] .", ". $useId['id'] .", ". $tranzactionSum .", '". $requisites ."');";
-				$conn->query($sql);
+				if(isset($_SESSION['userName']))
+				{
+					$sql = "SELECT id FROM users WHERE login = '". $_SESSION['userName'] ."';";
+					$useId = $conn->query($sql)->fetch_assoc();
+					$sql = "INSERT INTO transaction(goalId, paymentMethodId, userId, sum, bankData) VALUES(". $goal .", ". $res['id'] .", ". $useId['id'] .", ". $tranzactionSum .", '". $requisites ."');";
+					$conn->query($sql);
+				}
+				else
+				{
+					$sql = "INSERT INTO transaction(goalId, paymentMethodId, userId, sum, bankData) VALUES(". $goal .", ". $res['id'] .", ". $useId['id'] .", ". $tranzactionSum .", '". $requisites ."');";
+					$conn->query($sql);
+				}
 			}
 			else
 			{
