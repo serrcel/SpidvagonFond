@@ -393,4 +393,24 @@ input {
 	width: 100%;
 	padding: 10px;
 	float: left;
+	align-items: center;
+}
+
+.DocsBox a {
+	width: 50%;
+	position: relative;
+	left: 3%;
+	background-size: 100%;
+	background-color: white;
+	padding: 3px 3px;
+}
+
+.DocsBox a:hover {
+	background-color: #fe9a00;
+}
+
+[name="verifyide"]{
+	width: 50%;
+	position: relative;
+	left: 25%;
 }
