@@ -99,11 +99,34 @@
 		echo "<script>CreatePayMethod('". $row['emblem'] ."', '". $row['name'] ."', ". $row['bankDataLink'] .");</script>";
 	}
 
-	$sql = "SELECT id, goal, description, currentSum, goalSum, supportDocs FROM goals WHERE isOpen = 1 AND verified != 0";
-	$result = $conn->query($sql);
-	while ($row = $result->fetch_assoc())
+	$admin = 0;
+	if(isset($_SESSION['userName']))
 	{
-		echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].", '". $row['supportDocs'] ."');</script>";
+		$sql = "SELECT isAdmin FROM users WHERE login = '" . $_SESSION['userName']."';";	
+		$admin = $conn->query($sql)->fetch_assoc();
+		//echo "<script>alert('".$admin['isAdmin']."');</script>";
+		if($admin['isAdmin'])
+		{
+			$sql = "SELECT id, goal, description, currentSum, goalSum, supportDocs FROM goals WHERE isOpen = 1";
+		}
+		else
+		{
+			$sql = "SELECT id, goal, description, currentSum, goalSum, supportDocs FROM goals WHERE isOpen = 1 AND verified != 0";
+		}
+		$result = $conn->query($sql);
+		while ($row = $result->fetch_assoc())
+		{
+			echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].", '". $row['supportDocs'] ."','". $admin['isAdmin'] ."');</script>";
+		}
+	}
+	else
+	{
+		$sql = "SELECT id, goal, description, currentSum, goalSum, supportDocs FROM goals WHERE isOpen = 1 AND verified != 0";
+		$result = $conn->query($sql);
+		while ($row = $result->fetch_assoc())
+		{
+			echo "<script>CreateGoal(".$row['id'].", '".$row['goal']."', '".$row['description']."', ".$row['currentSum'].", ".$row['goalSum'].", '". $row['supportDocs'] ."','". 0 ."');</script>";
+		}
 	}
 	echo "<script>CreateDesigner()</script>";
 ?>

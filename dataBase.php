@@ -2,7 +2,7 @@
 session_start();
 $ServerName = "localhost"; //Server Name
 $UserName = "root"; //User Name
-$DataBase = "spidvagondb"; //Data Base Name
+$DataBase = "spidvagon"; //Data Base Name
 $UPassword = "";
 
 $conn = new mysqli($ServerName, $UserName, $UPassword, $DataBase); //writing a connection to the conn variable

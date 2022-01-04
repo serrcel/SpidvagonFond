@@ -4,7 +4,7 @@ window.onload=function()
 	
 }
 
-function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs)	//accept goal data and create appropriate div on page
+function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs, isAdmin)	//accept goal data and create appropriate div on page
 {
 	let header = document.createElement('h3');						//
 	header.innerHTML = head;										//
@@ -36,19 +36,6 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs)	//accep
 	progressBar.appendChild(progress);								//put scale of progress at the progress bar
 	progressBar.appendChild(progressText);							//put value of progress at the progress bar
 
-	let docsBox = document.createElement('div');
-	docsBox.className = "DocsBox";
-	let docsLink = document.createElement('a');
-	docsLink.href = vDocs;
-	docsLink.innerHTML = "Подтверждающие документы";
-	docsBox.appendChild(docsLink);
-
-	let verifyingBox = document.createElement('div');
-	let verifyingButton = document.createElement('a');
-	verifyingButton.href = "index.php?veryfide="+goalId;
-	verifyingButton.innerHTML = "Подтвердить";
-	verifyingBox.appendChild(verifyingButton);
-
 	let toPay = document.createElement('a');
 	//create pay button
 	toPay.innerHTML = "Пожертвовать";
@@ -69,8 +56,24 @@ function CreateGoal(goalId,head,description,currentSumm,fullSumm, vDocs)	//accep
 	goal.appendChild(headBox);										//put head at the goal box
 	goal.appendChild(textBox);										//put description at the goal box
 	goal.appendChild(progressBar);									//put progress bar at the goal box
-	goal.appendChild(docsBox);
-	goal.appendChild(verifyingBox);
+	if(isAdmin==1)
+	{
+		let docsBox = document.createElement('div');
+		docsBox.className = "DocsBox";
+		let docsLink = document.createElement('a');
+		docsLink.href = vDocs;
+		docsLink.innerHTML = "Подтверждающие документы";
+		docsBox.appendChild(docsLink);
+
+		let verifyingBox = document.createElement('div');
+		let verifyingButton = document.createElement('a');
+		verifyingButton.href = "index.php?veryfide="+goalId;
+		verifyingButton.innerHTML = "Подтвердить";
+		verifyingBox.appendChild(verifyingButton);
+
+		goal.appendChild(docsBox);
+		goal.appendChild(verifyingBox);
+	}
 	goal.appendChild(toPay);										//put pay button at the goal box
 	document.getElementById('GoalsCase').appendChild(goal);			//put goal box on page
 }

@@ -16,7 +16,7 @@
 				$sql = "SELECT id FROM users WHERE login = '". $_SESSION['userName'] ."'";
 				$us = $conn->query($sql);
 				$row = $us->fetch_assoc();
-				$sql = "INSERT INTO `goals`(`id`, `goal`, `description`, `currentSum`, `goalSum`, `isOpen`, `owner`, `cardnumber`, `supportDocs`) VALUES (NULL, '". $goal ."', '". $description ."', ". 0 .", ". $summ .", ". 0 .", ". $row['id'] .", '". $requisites ."','". $docs ."');";
+				$sql = "INSERT INTO `goals`(`id`, `goal`, `description`, `currentSum`, `goalSum`, `isOpen`, `owner`, `cardnumber`, `supportDocs`) VALUES (NULL, '". $goal ."', '". $description ."', ". 0 .", ". $summ .", ". 1 .", ". $row['id'] .", '". $requisites ."','". $docs ."');";
 				$conn->query($sql);
 			}
 			else
