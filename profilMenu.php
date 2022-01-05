@@ -19,7 +19,9 @@
 	<div class="ProfilChapter2">
 		<h3>Финансовая информация</h3>
 		<?php
-			echo "<p><b>Всего средств пожертвованно:</b> " . $user['email'] . "</p>";
+			$sql = "SELECT SUM(sum) FROM transaction WHERE userId = ". $user['id'] .";";
+			$result = $conn->query($sql)->fetch_assoc();
+			echo "<p><b>Всего средств пожертвованно:</b> " . $result['SUM(sum)'] . "</p>";
 		?>
 	</div>
 	<br><br>
