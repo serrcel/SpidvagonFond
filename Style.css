@@ -223,7 +223,10 @@ input {
 {
 	width: 100%;
 	float: left;
-	margin: 10px;
+}
+.TextBox>textarea
+{
+	width: 100%;
 }
 .Goal>.TextBox>p
 {
