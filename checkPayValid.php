@@ -40,6 +40,6 @@
 			<p>Сумма перевода должна быть больше нуля</p>
 			<?php
 		}
-		header("Location: http://localhost/spidvagonfond/");
+		header("Location: http://87.250.7.2:5051/SpidvagonFond/");
 	}
 ?>
